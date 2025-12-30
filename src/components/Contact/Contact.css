@@ -1,0 +1,120 @@
+.contact{
+    height:100vh;
+    width:100vw;
+    display:flex;
+   justify-content: center;
+   align-items:center;
+   overflow: hidden;
+}
+.leftcontact{
+   width:50%;
+   height:100%;
+   display:flex;
+   justify-content: center;
+   align-items:center;
+}
+.leftcontact img{
+    height:50%;
+    width:50%;
+    border-radius: 100%;
+    filter:drop-shadow(5px 10px 20px rgb(86, 180, 214));
+}
+.rightcontact{
+    
+   width:50%;
+   height:100vh;
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.form{
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 30px;;
+   height:70%;
+   width:80%;
+   box-shadow: 5px 5px 20px rgb(120, 187, 206),2px 5px 12px rgb(88, 183, 223);
+   gap:30px;
+}
+.form h1{
+   background:linear-gradient(to right, rgb(136, 161, 222), rgb(53, 190, 220));
+   background-clip: text;
+   color:transparent;
+   font-size: 2rem;
+   display:flex;
+    justify-content: center;
+   align-items: center;
+   margin-top:12px;
+}
+.form input{
+   font-size: 15px;
+   width:70%;
+   height:100px;
+  
+    background:linear-gradient(to right, rgb(211, 226, 231), rgb(185, 233, 244));
+   border-radius: 30px;
+   cursor:pointer;
+   padding:5px;
+   border: 4px  solid rgb(6, 35, 52);
+}
+#messege{
+    background:linear-gradient(to right, rgb(211, 226, 231), rgb(185, 233, 244));
+   border-radius: 30px;
+   cursor:pointer;
+   padding:5px;
+   width:68%;
+   height:40%;
+}
+#subbtn{
+  color: rgb(12, 1, 1);
+  background-color: rgb(146, 219, 223);
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-top: 17px;
+  font-size: 15px;
+  border: 2px solid rgb(146, 219, 223);
+  cursor: pointer;
+  margin-bottom:20px;
+}
+#subbtn:hover{
+
+  background: transparent;
+  color: rgb(146, 219, 223);
+  transition: all 0.5s;
+  box-shadow: 2px 5px 5px rgb(32, 63, 61);
+}
+
+@media (max-width:950px){
+   .contact{
+      flex-direction: column;
+   }
+   .leftcontact img{
+      width:100%;
+      height:50%;
+   }
+    
+   .rightcontact {
+       width:100%;
+      height:100%;
+   }
+}
+@media (max-width:750px){
+   .contact{
+      flex-direction: column;
+   }
+    .leftcontact {
+      width:100%;
+      height:50%;
+   }.leftcontact img{
+      width:80%;
+      height:80%;
+   }.rightcontact {
+      width:100%;
+      height:70%;
+   }
+}
+
+   
