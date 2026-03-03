@@ -55,7 +55,7 @@ gsap.from("#project", {
 const Projects = () => {
   return (
     <Element name="project" id="project" className="project-section">
-      <h2 className="project-title">🚀 1.5+ Year Of exeperience In Project</h2>
+      <h2 className="project-title">🚀 1+ Year Of exeperience In Project</h2>
 
       <div className="project-grid">
         {projectData.map((project, index) => (
