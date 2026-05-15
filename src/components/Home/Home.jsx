@@ -68,7 +68,7 @@ function Home() {
             </a>
 
             <a
-              href="
+              href="https://github.com/Sarthakpanigrahi-2246"
               target="_blank"
               rel="noreferrer"
             >
