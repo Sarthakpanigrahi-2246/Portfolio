@@ -58,7 +58,7 @@ function Home() {
 
           <div className="myprofile">
             <a
-              href="https://www.linkedin.com/in/sarthak-panigrahi-b8642a2a9"
+              href="https://www.linkedin.com/in/sarthak-panigrahi-sp2246"
               target="_blank"
               rel="noreferrer"
             >
@@ -68,7 +68,7 @@ function Home() {
             </a>
 
             <a
-              href="https://github.com/sarthakpanigrahi"
+              href="
               target="_blank"
               rel="noreferrer"
             >
