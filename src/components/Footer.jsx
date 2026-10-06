@@ -1,5 +1,5 @@
 import { person } from "../data.js";
-import { GitHubIcon, MailIcon, ArrowUpIcon } from "./Icons.jsx";
+import { GitHubIcon, MailIcon, LinkedInIcon, ArrowUpIcon } from "./Icons.jsx";
 
 export default function Footer({ onNavigate }) {
   const scrollToTop = () => {
@@ -21,10 +21,13 @@ export default function Footer({ onNavigate }) {
               <span className="w-6 h-6 rounded bg-neutral-900 text-white font-bold text-[10px] flex items-center justify-center">
                 SP
               </span>
-              <span className="font-semibold text-[#2b2927]">{person.name}</span>
+              <span className="font-semibold text-[#2b2927]">
+                {person.name}
+              </span>
             </div>
             <p className="text-sm text-[#665f59] mt-1 max-w-md">
-              Full-Stack Developer &amp; AI Enthusiast. Building reliable web applications and AI-driven products.
+              Full-Stack Developer &amp; AI Enthusiast. Building reliable web
+              applications and AI-driven products.
             </p>
           </div>
 
@@ -35,6 +38,15 @@ export default function Footer({ onNavigate }) {
             >
               <MailIcon className="w-4 h-4 text-[#665f59]" />
               <span>Email</span>
+            </a>
+            <a
+              href={person.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 hover:text-[#f7f3ee] transition-colors duration-150"
+            >
+              <LinkedInIcon className="w-4 h-4 text-[#665f59]" />
+              <span>LinkedIn</span>
             </a>
             <a
               href={person.github}
@@ -55,25 +67,11 @@ export default function Footer({ onNavigate }) {
             </button>
           </div>
         </div>
-
         <div className="pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#665f59]">
-          <p>&copy; {person.year} {person.name}. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <a
-              href="/privacy-policy"
-              onClick={(e) => handleLegalClick(e, "/privacy-policy")}
-              className="hover:text-[#2b2927] transition-colors duration-150 underline underline-offset-2"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="/terms-and-conditions"
-              onClick={(e) => handleLegalClick(e, "/terms-and-conditions")}
-              className="hover:text-[#2b2927] transition-colors duration-150 underline underline-offset-2"
-            >
-              Terms &amp; Conditions
-            </a>
-          </div>
+          <p>
+            &copy; {person.year} {person.name}. All rights reserved.
+          </p>
+          <div className="flex items-center gap-6"></div>
         </div>
       </div>
     </footer>

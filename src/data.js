@@ -4,6 +4,8 @@ export const person = {
   tagline: "I build full-stack web applications and AI-powered products with React, Node.js, TypeScript, and modern AI APIs.",
   email: "sarthakpanigrahi2218@gmail.com",
   github: "https://github.com/Sarthakpanigrahi-2246",
+  linkedin: "https://www.linkedin.com/in/sarthak-panigrahi-sp22462246/",
+  Resume: "Sarthak_Panigrahi_FullStack_AI.pdf",
   profileImage: "/sarthak-profile.png",
   year: 2026,
 };

@@ -17,6 +17,29 @@ export function GitHubIcon({ className = "w-5 h-5", ...props }) {
   );
 }
 
+export function ResumeAI({ className = "w-5 h-5", ...props }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+      <path d="M14 2v6h6" />
+      <circle cx="10" cy="13" r="2" />
+      <path d="M7 19v-1a3 3 0 0 1 6 0v1" />
+      <path d="M15 13h2" />
+      <path d="M15 17h2" />
+    </svg>
+  );
+}
+
 export function MailIcon({ className = "w-5 h-5", ...props }) {
   return (
     <svg
@@ -32,6 +55,19 @@ export function MailIcon({ className = "w-5 h-5", ...props }) {
     >
       <rect width="20" height="16" x="2" y="4" rx="2" />
       <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </svg>
+  );
+}
+export function LinkedInIcon({ className = "w-5 h-5", ...props }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M6.5 8.5H3V21h3.5V8.5ZM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3ZM21 13.85c0-3.76-2-5.51-4.67-5.51-2.15 0-3.11 1.18-3.65 2.01V8.5H9.2V21h3.48v-6.19c0-1.63.31-3.2 2.32-3.2 1.98 0 2 1.86 2 3.31V21H21v-7.15Z" />
     </svg>
   );
 }

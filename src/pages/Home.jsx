@@ -6,7 +6,14 @@ import {
   experienceData,
   projectsData,
 } from "../data.js";
-import { GitHubIcon, MailIcon, ExternalLinkIcon } from "../components/Icons.jsx";
+
+import {
+  GitHubIcon,
+  LinkedInIcon,
+  MailIcon,
+  ExternalLinkIcon,
+  ResumeAI,
+} from "../components/Icons.jsx";
 
 export default function Home() {
   useEffect(() => {
@@ -20,7 +27,7 @@ export default function Home() {
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.12 },
     );
 
     elements.forEach((element) => observer.observe(element));
@@ -66,7 +73,7 @@ export default function Home() {
               >
                 Contact Me
               </a>
-              <a
+              {/* <a
                 href={person.github}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -74,13 +81,27 @@ export default function Home() {
               >
                 <GitHubIcon className="w-4 h-4 text-neutral-700" />
                 <span>GitHub</span>
+              </a> */}
+              <a
+                href={person.Resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2.5 rounded-md bg-white border border-neutral-300 text-neutral-700 font-medium text-sm hover:bg-neutral-100 hover:text-neutral-900 transition-colors duration-150 inline-flex items-center gap-2"
+              >
+                <ResumeAI className="w-4 h-4 text-neutral-700" />
+                <span>Resume</span>
               </a>
             </div>
 
             {/* Availability Note */}
             <div className="pt-3 border-t border-neutral-200 text-xs text-neutral-500 flex items-center gap-2">
-              <span className="inline-block w-2 h-2 rounded-[2px] bg-[#a44a2a]" aria-hidden="true" />
-              <span>Available for full-stack engineering and AI product roles</span>
+              <span
+                className="inline-block w-2 h-2 rounded-[2px] bg-[#a44a2a]"
+                aria-hidden="true"
+              />
+              <span>
+                Available for full-stack engineering and AI product roles
+              </span>
             </div>
           </div>
 
@@ -300,6 +321,7 @@ export default function Home() {
       </section>
 
       {/* CONTACT SECTION */}
+
       <section
         id="contact"
         className="max-w-6xl mx-auto px-5 sm:px-8 scroll-mt-20"
@@ -311,32 +333,39 @@ export default function Home() {
             <h2 className="text-xs font-semibold uppercase tracking-wider text-[#a44a2a] mb-2">
               Contact
             </h2>
+
             <p className="text-3xl font-bold tracking-tight text-neutral-900 mb-3">
               Let's build something useful.
             </p>
+
             <p className="text-neutral-600 text-base leading-relaxed">
-              I am open to full-stack engineering roles and AI application development. The best way to reach me is directly by email or on GitHub.
+              I am open to full-stack engineering roles and AI application
+              development. The best way to reach me is directly by email or on
+              GitHub.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
+{/* 
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl"> */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
             {/* Email Card */}
             <a
               href={`mailto:${person.email}`}
-              className="group block bg-white border border-neutral-200 rounded-lg p-6 hover:border-[#a44a2a] hover:shadow-sm transition-all duration-150"
+              className="group min-w-0 bg-white border border-neutral-200 rounded-lg p-6 hover:border-[#a44a2a] hover:shadow-sm transition-all duration-150"
             >
               <div className="flex items-center justify-between mb-3">
-                <div className="p-2 rounded bg-neutral-100 text-neutral-800 group-hover:bg-[#fbf1ed] group-hover:text-[#a44a2a] transition-colors duration-150">
+                <div className="p-2 rounded bg-neutral-100 text-neutral-800 group-hover:bg-[#fbf1ed] group-hover:text-[#a44a2a] transition-colors">
                   <MailIcon className="w-5 h-5" />
                 </div>
-                <span className="text-xs font-medium text-neutral-400 group-hover:text-[#a44a2a] transition-colors duration-150">
-                  Send email &rarr;
+                <span className="text-xs font-medium text-neutral-400 group-hover:text-[#a44a2a]">
+                  Send email →
                 </span>
               </div>
+
               <h3 className="text-sm font-semibold text-neutral-900 mb-1">
                 Email
               </h3>
-              <p className="text-sm font-mono text-neutral-600 group-hover:text-neutral-900 transition-colors duration-150 break-all">
+
+              <p className="text-sm font-mono text-neutral-600 break-all">
                 {person.email}
               </p>
             </a>
@@ -346,22 +375,50 @@ export default function Home() {
               href={person.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block bg-white border border-neutral-200 rounded-lg p-6 hover:border-[#a44a2a] hover:shadow-sm transition-all duration-150"
+              className="group min-w-0 bg-white border border-neutral-200 rounded-lg p-6 hover:border-[#a44a2a] hover:shadow-sm transition-all duration-150"
             >
               <div className="flex items-center justify-between mb-3">
-                <div className="p-2 rounded bg-neutral-100 text-neutral-800 group-hover:bg-[#fbf1ed] group-hover:text-[#a44a2a] transition-colors duration-150">
+                <div className="p-2 rounded bg-neutral-100 text-neutral-800 group-hover:bg-[#fbf1ed] group-hover:text-[#a44a2a] transition-colors">
                   <GitHubIcon className="w-5 h-5" />
                 </div>
-                <span className="text-xs font-medium text-neutral-400 group-hover:text-[#a44a2a] transition-colors duration-150 flex items-center gap-1">
-                  <span>Open</span>
-                  <ExternalLinkIcon className="w-3.5 h-3.5" />
+
+                <span className="text-xs font-medium text-neutral-400 group-hover:text-[#a44a2a] flex items-center gap-1">
+                  Open <ExternalLinkIcon className="w-3.5 h-3.5" />
                 </span>
               </div>
+
               <h3 className="text-sm font-semibold text-neutral-900 mb-1">
                 GitHub Profile
               </h3>
-              <p className="text-sm font-mono text-neutral-600 group-hover:text-neutral-900 transition-colors duration-150 break-all">
+
+              <p className="text-sm font-mono text-neutral-600 break-words">
                 github.com/Sarthakpanigrahi-2246
+              </p>
+            </a>
+
+            {/* LinkedIn Card — positioned in the second row, first column */}
+            <a
+              href={person.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group min-w-0 bg-white border border-neutral-200 rounded-lg p-6 hover:border-[#a44a2a] hover:shadow-sm transition-all duration-150"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <div className="p-2 rounded bg-neutral-100 text-neutral-800 group-hover:bg-[#fbf1ed] group-hover:text-[#a44a2a] transition-colors">
+                  <LinkedInIcon className="w-5 h-5" />
+                </div>
+
+                <span className="text-xs font-medium text-neutral-400 group-hover:text-[#a44a2a] flex items-center gap-1">
+                  Open <ExternalLinkIcon className="w-3.5 h-3.5" />
+                </span>
+              </div>
+
+              <h3 className="text-sm font-semibold text-neutral-900 mb-1">
+                LinkedIn Profile
+              </h3>
+
+              <p className="text-sm font-mono text-neutral-600 break-words">
+                linkedin.com/in/sarthak-panigrahi-sp22462246
               </p>
             </a>
           </div>
@@ -370,3 +427,5 @@ export default function Home() {
     </div>
   );
 }
+
+// https://www.linkedin.com/in/sarthak-panigrahi-sp22462246/

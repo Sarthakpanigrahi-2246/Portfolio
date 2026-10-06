@@ -2,9 +2,6 @@ import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
-import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
-import TermsConditions from "./pages/TermsConditions.jsx";
-
 export default function App() {
   const [currentPath, setCurrentPath] = useState(() => {
     const raw = window.location.pathname.replace(/\/+$/, "");
